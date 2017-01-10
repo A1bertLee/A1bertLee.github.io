@@ -9,8 +9,14 @@
     
     <meta name="author" content="AlbertLee">
     
-    <meta name="description" content="申请github账号Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。SSH Keys，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，配置方法见网上。
-">
+    <meta name="description" content="安装环境
+安装Node（必须）作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可
+
+安装Git（必须）作用：把本地的hexo内容提交到github上去. 安装Xcode就自带有Git，我就不多说了。默认安装即可。
+
+
+申请github账号
+github账">
     
     
     
@@ -106,16 +112,39 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请github账号"><span class="toc-number">1.</span> <span class="toc-text">申请github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装环境"><span class="toc-number">2.</span> <span class="toc-text">安装环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式安装HEXO"><span class="toc-number">3.</span> <span class="toc-text">正式安装HEXO　</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO基本使用"><span class="toc-number">4.</span> <span class="toc-text">HEXO基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见错误一览"><span class="toc-number">5.</span> <span class="toc-text">常见错误一览</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装环境"><span class="toc-number">1.</span> <span class="toc-text">安装环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#申请github账号"><span class="toc-number">2.</span> <span class="toc-text">申请github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式安装HEXO"><span class="toc-number">3.</span> <span class="toc-text">正式安装HEXO　</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO基本使用"><span class="toc-number">4.</span> <span class="toc-text">HEXO基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见错误一览"><span class="toc-number">5.</span> <span class="toc-text">常见错误一览</span></a></li></ol>
 		</div>
 		
-		<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><p>Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。SSH Keys，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，配置方法见网上。</p>
-<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
+		<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
 <li><p><strong>安装Node（必须）</strong><br>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可</p>
 </li>
-<li><p><strong>安装Git（必须）</strong><br>作用：把本地的hexo内容提交到github上去. 安装Xcode就自带有Git，我就不多说了。默认安装即可</p>
+<li><p><strong>安装Git（必须）</strong><br>作用：把本地的hexo内容提交到github上去. 安装Xcode就自带有Git，我就不多说了。默认安装即可。</p>
 </li>
 </ul>
+<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
+<li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
+</li>
+<li><p><strong>配置好SSH-Key</strong> 配置方法很简单，进入GitGUI中生成ssh-key。然后再进入github账号的设置，添加好key。</p>
+</li>
+<li><p><strong>测试Key</strong> 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
+<blockquote>
+<p>$ ssh -T git@github.com<br>如果是下面的反馈：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
+</blockquote>
+</li>
+</ul>
+<p>不要紧张，输入yes就好，然后会看到：</p>
+<blockquote>
+<p>Hi A1bertLee! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<ul>
+<li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
+<p>$ git config –global user.name “your name”//用户名</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>$ git config –global user.email  “your email”//填写自己的邮箱</p>
+</blockquote>
 <h2 id="正式安装HEXO"><a href="#正式安装HEXO" class="headerlink" title="正式安装HEXO　"></a>正式安装HEXO　</h2><p>Node和Git都安装好后，可执行如下命令：</p>
 <blockquote>
 <p>$ npm install -g hexo</p>
