@@ -137,7 +137,7 @@ var _hmt = _hmt || [];
 </ul>
 <p>浏览器输入：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  查看搭建效果。此后的每次变更_config.yml文件或者上传文件以及改动没有效果，都可以先这三个命令调试，非常好用，尤其是当你想调试出自己想要的主题时。</p>
 <h2 id="安装RSS插件"><a href="#安装RSS插件" class="headerlink" title="安装RSS插件"></a>安装RSS插件</h2><ul>
-<li>安装插件。进入本地hexo目录，打开Git bash。输入以下命令：(一定要有–save,不然在使用$ hexo g命令后，public文件夹中无法生成atom.xml文件)<blockquote>
+<li><strong>安装插件</strong>。进入本地hexo目录，打开Git bash。输入以下命令：(一定要有–save,不然在使用$ hexo g命令后，public文件夹中无法生成atom.xml文件)<blockquote>
 <p>$ npm install hexo-generator-feed –save</p>
 </blockquote>
 </li>
@@ -147,18 +147,18 @@ var _hmt = _hmt || [];
 <p>$ npm install hexo-generator-feed –save<br>npm WARN optional dep failed, continuing fsevents@1.0.17<br>hexo-generator-feed@1.2.0 node_modules\hexo-generator-feed<br>├── object-assign@4.1.0<br>└── nunjucks@2.5.2 (asap@2.0.5, yargs@3.32.0, chokidar@1.6.1)</p>
 </blockquote>
 <ul>
-<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）</li>
-</ul>
-<blockquote>
+<li><strong>添加配置</strong>。在博客根目录的_config.yml中加入以下代码：<blockquote>
 <p>plugin: hexo-generator-feed<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p>
 </blockquote>
+</li>
+</ul>
 <p>// type 表示类型, 是 atom 还是 rss2.<br>// path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>// limit 最多多少篇最近文章</p>
 <p>然后在\themes\Tinnypp目录下的_config.yml中添加：</p>
 <blockquote>
 <p>rss:  /atom.xml</p>
 </blockquote>
 <ul>
-<li>重新生成html。<blockquote>
+<li><strong>重新生成html</strong>。<blockquote>
 <p>$ hexo clean #清理之前生成html文件<br>$ hexo g #生成html文件<br>$ hexo s #启动本地服务，进行文章预览调试</p>
 </blockquote>
 </li>
