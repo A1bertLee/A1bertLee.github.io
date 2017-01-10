@@ -9,6 +9,11 @@
     
     <meta name="author" content="AlbertLee">
     
+    <meta name="description" content="申请github账号
+github账号 Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。
+
+配置好SSH-Key 配置方法很简单，进入GitGUI中生成ssh-key。然后再进入github">
+    
     
     
     
@@ -103,10 +108,34 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请github账号"><span class="toc-number">1.</span> <span class="toc-text">申请github账号</span></a></li></ol>
 		</div>
 		
-		  
+		<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
+<li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
+</li>
+<li><p><strong>配置好SSH-Key</strong> 配置方法很简单，进入GitGUI中生成ssh-key。然后再进入github账号的设置，添加好key。</p>
+</li>
+<li><p><strong>测试Key</strong> 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
+<blockquote>
+<p>$ ssh -T git@github.com<br>如果是下面的反馈：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
+</blockquote>
+</li>
+</ul>
+<p>不要紧张，输入yes就好，然后会看到：</p>
+<blockquote>
+<p>Hi A1bertLee! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<ul>
+<li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
+<p>$ git config –global user.name “your name”//用户名</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>$ git config –global user.email  “your email”//填写自己的邮箱</p>
+</blockquote>
+  
 	</div>
 		<footer class="article-footer clearfix">
 

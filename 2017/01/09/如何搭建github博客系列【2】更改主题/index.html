@@ -116,11 +116,11 @@ var _hmt = _hmt || [];
 <blockquote>
 <p><strong>_config.yml</strong> 全局配置文件。要注意的是，该文件格式要求极为严格，缺少一个空格都会导致运行错误。小提示：不要用Tab缩进，两个空格符， 冒号：后面只用一个空格即可 。<br><strong>themes</strong> 存放主题的文件夹<br><strong>source</strong> 博客资源文件夹<br><strong>source/_drafts</strong> 草稿文件夹<br><strong>source/_posts</strong> 文章文件夹<br><strong>themes/landscape</strong> 默认皮肤文件夹<br>…</p>
 </blockquote>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>建立了Hexo文件之后就可以下载主题了，在themes文件夹下使用git命令：</p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>建立了Hexo文件之后就可以下载主题了，在themes文件夹下使用GitBash输入命令：</p>
 <blockquote>
 <p>$ git clone <a href="https://github.com/A1bertLee/Tinnypp" target="_blank" rel="external">https://github.com/A1bertLee/Tinnypp</a></p>
 </blockquote>
-<p>上面的是https格式的链接，ssh也可以。</p>
+<p>上面的是https格式的链接，ssh也可以（ssh可用的前提是你已经配置好ssh-key了）。</p>
 <h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><ul>
 <li><p><strong>修改参数</strong> 修改Hexo目录下的config.yml(Hexo有两个config.yml文件，一个在根目录，一个在theme下，此时修改的是在根目录下的)配置文件中的theme属性，将其设置为Tinnypp（相应的主题名字）。<br>同时请设置stylus属性中的compress值为true。</p>
 <blockquote>
@@ -136,6 +136,35 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>浏览器输入：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  查看搭建效果。此后的每次变更_config.yml文件或者上传文件以及改动没有效果，都可以先这三个命令调试，非常好用，尤其是当你想调试出自己想要的主题时。</p>
+<p>##安装RSS插件</p>
+<ul>
+<li>安装插件。进入本地hexo目录，打开Git bash。输入以下命令：(一定要有–save,不然在使用$ hexo g命令后，public文件夹中无法生成atom.xml文件)<blockquote>
+<p>$ npm install hexo-generator-feed –save</p>
+</blockquote>
+</li>
+</ul>
+<p>出现下面的提示说明安装成功：</p>
+<blockquote>
+<p>$ npm install hexo-generator-feed –save<br>npm WARN optional dep failed, continuing fsevents@1.0.17<br>hexo-generator-feed@1.2.0 node_modules\hexo-generator-feed<br>├── object-assign@4.1.0<br>└── nunjucks@2.5.2 (asap@2.0.5, yargs@3.32.0, chokidar@1.6.1)</p>
+</blockquote>
+<ul>
+<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）<br><pre><br>plugin: </pre></li>
+</ul>
+<ul>
+<li>hexo-generator-feed<br>//Feed Atom<br>feed:<pre><code>type: atom
+path: atom.xml
+limit: 20
+</code></pre>  //type 表示类型, 是 atom 还是 rss2.<br>  //path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>  //limit 最多多少篇最近文章<br><br>然后在\themes\Tinnypp目录下的_config.yml中添加：<blockquote>
+<p>rss:  /atom.xml</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>重新生成html。<blockquote>
+<p>$ hexo clean #清理之前生成html文件<br>$ hexo g #生成html文件<br>$ hexo s #启动本地服务，进行文章预览调试</p>
+</blockquote>
+</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">

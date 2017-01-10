@@ -60,9 +60,38 @@
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%904%E3%80%91%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【4】上传博客/</id>
     <published>2017-01-10T02:55:51.000Z</published>
-    <updated>2017-01-10T03:02:33.929Z</updated>
+    <updated>2017-01-10T03:12:03.229Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
+<li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
+</li>
+<li><p><strong>配置好SSH-Key</strong> 配置方法很简单，进入GitGUI中生成ssh-key。然后再进入github账号的设置，添加好key。</p>
+</li>
+<li><p><strong>测试Key</strong> 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
+<blockquote>
+<p>$ ssh -T git@github.com<br>如果是下面的反馈：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
+</blockquote>
+</li>
+</ul>
+<p>不要紧张，输入yes就好，然后会看到：</p>
+<blockquote>
+<p>Hi A1bertLee! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<ul>
+<li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
+<p>$ git config –global user.name “your name”//用户名</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>$ git config –global user.email  “your email”//填写自己的邮箱</p>
+</blockquote>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;申请github账号&quot;&gt;&lt;a href=&quot;#申请github账号&quot; class=&quot;headerlink&quot; title=&quot;申请github账号&quot;&gt;&lt;/a&gt;申请github账号&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;github账号&lt;/strong&gt; Git
     
     </summary>
     
@@ -100,18 +129,18 @@
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%902%E3%80%91%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【2】更改主题/</id>
     <published>2017-01-09T03:24:15.000Z</published>
-    <updated>2017-01-10T03:01:56.825Z</updated>
+    <updated>2017-01-10T06:14:39.935Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
 <h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
 <blockquote>
 <p><strong>_config.yml</strong> 全局配置文件。要注意的是，该文件格式要求极为严格，缺少一个空格都会导致运行错误。小提示：不要用Tab缩进，两个空格符， 冒号：后面只用一个空格即可 。<br><strong>themes</strong> 存放主题的文件夹<br><strong>source</strong> 博客资源文件夹<br><strong>source/_drafts</strong> 草稿文件夹<br><strong>source/_posts</strong> 文章文件夹<br><strong>themes/landscape</strong> 默认皮肤文件夹<br>…</p>
 </blockquote>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>建立了Hexo文件之后就可以下载主题了，在themes文件夹下使用git命令：</p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>建立了Hexo文件之后就可以下载主题了，在themes文件夹下使用GitBash输入命令：</p>
 <blockquote>
 <p>$ git clone <a href="https://github.com/A1bertLee/Tinnypp" target="_blank" rel="external">https://github.com/A1bertLee/Tinnypp</a></p>
 </blockquote>
-<p>上面的是https格式的链接，ssh也可以。</p>
+<p>上面的是https格式的链接，ssh也可以（ssh可用的前提是你已经配置好ssh-key了）。</p>
 <h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><ul>
 <li><p><strong>修改参数</strong> 修改Hexo目录下的config.yml(Hexo有两个config.yml文件，一个在根目录，一个在theme下，此时修改的是在根目录下的)配置文件中的theme属性，将其设置为Tinnypp（相应的主题名字）。<br>同时请设置stylus属性中的compress值为true。</p>
 <blockquote>
@@ -127,6 +156,35 @@
 </li>
 </ul>
 <p>浏览器输入：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  查看搭建效果。此后的每次变更_config.yml文件或者上传文件以及改动没有效果，都可以先这三个命令调试，非常好用，尤其是当你想调试出自己想要的主题时。</p>
+<p>##安装RSS插件</p>
+<ul>
+<li>安装插件。进入本地hexo目录，打开Git bash。输入以下命令：(一定要有–save,不然在使用$ hexo g命令后，public文件夹中无法生成atom.xml文件)<blockquote>
+<p>$ npm install hexo-generator-feed –save</p>
+</blockquote>
+</li>
+</ul>
+<p>出现下面的提示说明安装成功：</p>
+<blockquote>
+<p>$ npm install hexo-generator-feed –save<br>npm WARN optional dep failed, continuing fsevents@1.0.17<br>hexo-generator-feed@1.2.0 node_modules\hexo-generator-feed<br>├── object-assign@4.1.0<br>└── nunjucks@2.5.2 (asap@2.0.5, yargs@3.32.0, chokidar@1.6.1)</p>
+</blockquote>
+<ul>
+<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）<br><pre><br>plugin: </pre></li>
+</ul>
+<ul>
+<li>hexo-generator-feed<br>//Feed Atom<br>feed:<pre><code>type: atom
+path: atom.xml
+limit: 20
+</code></pre>  //type 表示类型, 是 atom 还是 rss2.<br>  //path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>  //limit 最多多少篇最近文章<br><br>然后在\themes\Tinnypp目录下的_config.yml中添加：<blockquote>
+<p>rss:  /atom.xml</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>重新生成html。<blockquote>
+<p>$ hexo clean #清理之前生成html文件<br>$ hexo g #生成html文件<br>$ hexo s #启动本地服务，进行文章预览调试</p>
+</blockquote>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -150,7 +208,7 @@
     <link href="http://yoursite.com/2016/11/16/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%901%E3%80%91%E6%9C%AC%E5%9C%B0%E5%B0%9D%E9%B2%9C/"/>
     <id>http://yoursite.com/2016/11/16/如何搭建github博客系列【1】本地尝鲜/</id>
     <published>2016-11-16T08:02:06.000Z</published>
-    <updated>2017-01-10T03:01:42.887Z</updated>
+    <updated>2017-01-10T04:27:31.796Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
 <li><p><strong>安装Node（必须）</strong><br>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可</p>
@@ -158,30 +216,6 @@
 <li><p><strong>安装Git（必须）</strong><br>作用：把本地的hexo内容提交到github上去. 安装Xcode就自带有Git，我就不多说了。默认安装即可。</p>
 </li>
 </ul>
-<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
-<li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
-</li>
-<li><p><strong>配置好SSH-Key</strong> 配置方法很简单，进入GitGUI中生成ssh-key。然后再进入github账号的设置，添加好key。</p>
-</li>
-<li><p><strong>测试Key</strong> 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
-<blockquote>
-<p>$ ssh -T git@github.com<br>如果是下面的反馈：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
-</blockquote>
-</li>
-</ul>
-<p>不要紧张，输入yes就好，然后会看到：</p>
-<blockquote>
-<p>Hi A1bertLee! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
-<ul>
-<li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
-<p>$ git config –global user.name “your name”//用户名</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p>$ git config –global user.email  “your email”//填写自己的邮箱</p>
-</blockquote>
 <h2 id="正式安装HEXO"><a href="#正式安装HEXO" class="headerlink" title="正式安装HEXO　"></a>正式安装HEXO　</h2><p>Node和Git都安装好后，可执行如下命令：</p>
 <blockquote>
 <p>$ npm install -g hexo</p>
@@ -205,12 +239,9 @@
 </blockquote>
 </li>
 </ul>
-<p>然后在浏览器输入<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong></p>
-<blockquote>
-<p><strong> 注意 </strong><br>如果已经有了hexo blog文件夹，只是电脑重装了或者在一台没有此类环境的电脑里使用的话，只需要安装好环境以及安装hexo即可进行本地启动，无需再初始化以及生成静态页面了。</p>
-</blockquote>
+<p>然后在浏览器输入:<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong></p>
 <p>虽然很简陋，但好歹有了一个属于自己的小窝了。参考链接，本地已经简单的设置好了。当然现在域名和服务器都是基于自己的电脑，还需要跟github进行关联。</p>
-<h2 id="常见错误一览"><a href="#常见错误一览" class="headerlink" title="常见错误一览"></a>常见错误一览</h2><p><strong> 常见的HEXO配置错误 </strong></p>
+<h2 id="常见错误一览"><a href="#常见错误一览" class="headerlink" title="常见错误一览"></a>常见错误一览</h2><p><strong>常见的HEXO配置错误</strong></p>
 <p>ERROR Plugin load failed: hexo-server<br>原因： Besides, utilities are separated into a standalone module. hexo.util is not reachable anymore.<br>解决方法，执行命令：</p>
 <blockquote>
 <p>$ sudo npm install hexo-server</p>
