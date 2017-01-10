@@ -129,7 +129,7 @@
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%902%E3%80%91%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【2】更改主题/</id>
     <published>2017-01-09T03:24:15.000Z</published>
-    <updated>2017-01-10T06:30:50.089Z</updated>
+    <updated>2017-01-10T06:34:15.663Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
 <h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
@@ -156,8 +156,7 @@
 </li>
 </ul>
 <p>浏览器输入：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  查看搭建效果。此后的每次变更_config.yml文件或者上传文件以及改动没有效果，都可以先这三个命令调试，非常好用，尤其是当你想调试出自己想要的主题时。</p>
-<p>##安装RSS插件</p>
-<ul>
+<h2 id="安装RSS插件"><a href="#安装RSS插件" class="headerlink" title="安装RSS插件"></a>安装RSS插件</h2><ul>
 <li>安装插件。进入本地hexo目录，打开Git bash。输入以下命令：(一定要有–save,不然在使用$ hexo g命令后，public文件夹中无法生成atom.xml文件)<blockquote>
 <p>$ npm install hexo-generator-feed –save</p>
 </blockquote>
@@ -173,7 +172,7 @@
 <blockquote>
 <p>plugin: hexo-generator-feed<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p>
 </blockquote>
-<p>//type 表示类型, 是 atom 还是 rss2.<br>//path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>//limit 最多多少篇最近文章</p>
+<p>// type 表示类型, 是 atom 还是 rss2.<br>// path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>// limit 最多多少篇最近文章</p>
 <p>然后在\themes\Tinnypp目录下的_config.yml中添加：</p>
 <blockquote>
 <p>rss:  /atom.xml</p>
