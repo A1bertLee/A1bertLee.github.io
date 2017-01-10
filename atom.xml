@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-10T02:58:48.976Z</updated>
+  <updated>2017-01-10T03:02:41.270Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,49 +20,7 @@
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%90%E7%BB%AD%E3%80%91%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【续】个人简历/</id>
     <published>2017-01-10T02:58:48.000Z</published>
-    <updated>2017-01-10T02:58:48.976Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何搭建github博客系列【5】撰写文章</title>
-    <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%905%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【5】撰写文章/</id>
-    <published>2017-01-10T02:58:09.000Z</published>
-    <updated>2017-01-10T02:58:09.238Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何搭建github博客系列【4】上传博客</title>
-    <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%904%E3%80%91%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【4】上传博客/</id>
-    <published>2017-01-10T02:55:51.000Z</published>
-    <updated>2017-01-10T02:55:51.152Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>如何将Tinnypp私有化？</title>
-    <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%903%E3%80%91%E4%B8%BB%E9%A2%98%E7%A7%81%E6%9C%89%E5%8C%96/"/>
-    <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【3】主题私有化/</id>
-    <published>2017-01-09T03:57:20.000Z</published>
-    <updated>2017-01-09T03:58:32.873Z</updated>
+    <updated>2017-01-10T03:02:41.270Z</updated>
     
     <summary type="html">
     
@@ -78,11 +36,71 @@
   </entry>
   
   <entry>
-    <title>如何更改自带的主题？</title>
+    <title>如何搭建github博客系列【5】撰写文章</title>
+    <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%905%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
+    <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【5】撰写文章/</id>
+    <published>2017-01-10T02:58:09.000Z</published>
+    <updated>2017-01-10T03:02:27.771Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建github博客系列【4】上传博客</title>
+    <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%904%E3%80%91%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【4】上传博客/</id>
+    <published>2017-01-10T02:55:51.000Z</published>
+    <updated>2017-01-10T03:02:33.929Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建github博客系列【3】主题私有化</title>
+    <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%903%E3%80%91%E4%B8%BB%E9%A2%98%E7%A7%81%E6%9C%89%E5%8C%96/"/>
+    <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【3】主题私有化/</id>
+    <published>2017-01-09T03:57:20.000Z</published>
+    <updated>2017-01-10T03:02:08.763Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建github博客系列【2】更改主题</title>
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%902%E3%80%91%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【2】更改主题/</id>
     <published>2017-01-09T03:24:15.000Z</published>
-    <updated>2017-01-09T03:55:37.396Z</updated>
+    <updated>2017-01-10T03:01:56.825Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
 <h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
@@ -128,11 +146,11 @@
   </entry>
   
   <entry>
-    <title>如何搭建github博客系列【1】配置环境</title>
+    <title>如何搭建github博客系列【1】本地尝鲜</title>
     <link href="http://yoursite.com/2016/11/16/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%901%E3%80%91%E6%9C%AC%E5%9C%B0%E5%B0%9D%E9%B2%9C/"/>
     <id>http://yoursite.com/2016/11/16/如何搭建github博客系列【1】本地尝鲜/</id>
     <published>2016-11-16T08:02:06.000Z</published>
-    <updated>2017-01-10T02:39:20.803Z</updated>
+    <updated>2017-01-10T03:01:42.887Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
 <li><p><strong>安装Node（必须）</strong><br>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可</p>
