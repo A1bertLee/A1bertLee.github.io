@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | 飞花逐月</title>
+    <title>如何搭建github博客系列【1】配置环境 | 飞花逐月</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="AlbertLee">
     
-    <meta name="description" content="欢迎来到我的个人博客，这是我的GitHub.
-本人介绍本人喜爱android，现在正处在中级阶段（刚跨过初级），若以后的文章中出现谬误，请大家不吝指正哈！更多的关于我的介绍，请移步“关于我”栏目。
-博客之路作为一个菜鸟，开博客自然不是为了指点他人。以后我的博客主要用于记录学习过程中遇到的一些问题以及">
+    <meta name="description" content="申请github账号Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。SSH Keys，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，配置方法见网上。
+">
     
     
     
@@ -96,10 +95,10 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/11/15/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2016/11/16/github博客尝鲜/" title="如何搭建github博客系列【1】配置环境" itemprop="url">如何搭建github博客系列【1】配置环境</a>
   </h1>
   <p class="article-time">
-    <time datetime="2016-11-15T09:26:55.000Z" itemprop="datePublished">2016-11-15</time>
+    <time datetime="2016-11-16T08:02:06.000Z" itemprop="datePublished">2016-11-16</time>
   </p>
 </header>
 	<div class="article-content">
@@ -107,36 +106,88 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本人介绍"><span class="toc-number">1.</span> <span class="toc-text">本人介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客之路"><span class="toc-number">2.</span> <span class="toc-text">博客之路</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请github账号"><span class="toc-number">1.</span> <span class="toc-text">申请github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装环境"><span class="toc-number">2.</span> <span class="toc-text">安装环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正式安装HEXO"><span class="toc-number">3.</span> <span class="toc-text">正式安装HEXO　</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEXO基本使用"><span class="toc-number">4.</span> <span class="toc-text">HEXO基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见错误一览"><span class="toc-number">5.</span> <span class="toc-text">常见错误一览</span></a></li></ol>
 		</div>
 		
-		<p>欢迎来到我的个人博客，这是我的<a href="https://github.com/a1bertlee" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="本人介绍"><a href="#本人介绍" class="headerlink" title="本人介绍"></a>本人介绍</h2><p>本人喜爱android，现在正处在中级阶段（刚跨过初级），若以后的文章中出现谬误，请大家不吝指正哈！更多的关于我的介绍，请移步“关于我”栏目。</p>
-<h2 id="博客之路"><a href="#博客之路" class="headerlink" title="博客之路"></a>博客之路</h2><p>作为一个菜鸟，开博客自然不是为了指点他人。以后我的博客主要用于记录学习过程中遇到的一些问题以及关于各知识点的总结，还有其它一些工具使用方法的备忘。</p>
+		<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><p>Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。SSH Keys，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，配置方法见网上。</p>
+<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
+<li><p><strong>安装Node（必须）</strong><br>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可</p>
+</li>
+<li><p><strong>安装Git（必须）</strong><br>作用：把本地的hexo内容提交到github上去. 安装Xcode就自带有Git，我就不多说了。默认安装即可</p>
+</li>
+</ul>
+<h2 id="正式安装HEXO"><a href="#正式安装HEXO" class="headerlink" title="正式安装HEXO　"></a>正式安装HEXO　</h2><p>Node和Git都安装好后，可执行如下命令：</p>
 <blockquote>
-<p>如果你觉得本博客也能对你有用，就请收藏并积极留言吧！若是你也有或者即将有github博客，可以联系我，交换友链吧！</p>
+<p>$ npm install -g hexo</p>
 </blockquote>
-<p><img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1212/25/c0/16875142_1356415699825.jpg" alt="跨越"></p>
+<h2 id="HEXO基本使用"><a href="#HEXO基本使用" class="headerlink" title="HEXO基本使用"></a>HEXO基本使用</h2><ul>
+<li><strong>初始化hexo</strong><br>创建一个文件夹，如：Blog，cd到Blog里执行hexo init命令：<blockquote>
+<p>$ hexo init</p>
+</blockquote>
+</li>
+</ul>
+<p>好啦，至此，全部安装工作已经完成！</p>
+<ul>
+<li><p><strong>生成静态页面</strong><br>继续再Blog目录下执行如下命令，生成静态页面</p>
+<blockquote>
+<p>hexo generate （hexo g  也可以）</p>
+</blockquote>
+</li>
+<li><p><strong>本地启动测试</strong><br>启动本地服务，进行文章预览调试，命令：</p>
+<blockquote>
+<p>$ hexo s（启动本地服务器测试）</p>
+</blockquote>
+</li>
+</ul>
+<p>然后在浏览器输入<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong></p>
+<blockquote>
+<p><strong> 注意 </strong><br>如果已经有了hexo blog文件夹，只是电脑重装了或者在一台没有此类环境的电脑里使用的话，只需要安装好环境以及安装hexo即可进行本地启动，无需再初始化以及生成静态页面了。</p>
+</blockquote>
+<p>虽然很简陋，但好歹有了一个属于自己的小窝了。参考链接，本地已经简单的设置好了。当然现在域名和服务器都是基于自己的电脑，还需要跟github进行关联。</p>
+<h2 id="常见错误一览"><a href="#常见错误一览" class="headerlink" title="常见错误一览"></a>常见错误一览</h2><p><strong> 常见的HEXO配置错误 </strong></p>
+<p>ERROR Plugin load failed: hexo-server<br>原因： Besides, utilities are separated into a standalone module. hexo.util is not reachable anymore.<br>解决方法，执行命令：</p>
+<blockquote>
+<p>$ sudo npm install hexo-server</p>
+</blockquote>
+<p>执行命令：</p>
+<blockquote>
+<p>hexo server，提示：Usage: hexo<command> ….</p>
+</blockquote>
+<p>原因：我认为是没有生成本地服务</p>
+<p>解决方法，执行命令：</p>
+<blockquote>
+<p>$ npm install hexo-server –save</p>
+</blockquote>
+<p>提示：hexo-server@0.1.2 node_modules/hexo-server<br>….<br>表示成功了！  <a href="https://hexo.io/zh-cn/docs/server.html" target="_blank" rel="external">参考</a></p>
+<p>这个时候再执行：</p>
+<blockquote>
+<p>$ hexo-server</p>
+</blockquote>
+<p>得到：INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>这个时候再点击：<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a>.<br>正常情况下应该是最原始的画面，但是我看到的是： 白板和Cannot GET / 几个字 原因： 由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
+<blockquote>
+<p>npm install hexo-renderer-ejs –save<br>npm install hexo-renderer-stylus –save<br>npm install hexo-renderer-marked –save</p>
+</blockquote>
+<p>这个时候再重新生成静态文件，启动本地服务器：再点击网址<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a><br>OK！终于可以看到属于你自己的blog啦！</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/初体验/">初体验</a><a href="/tags/博客/">博客</a>
+  <span></span> <a href="/tags/github/">github</a><a href="/tags/博客搭建/">博客搭建</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/博客之路/">博客之路</a>
+  <a class="article-category-link" href="/categories/博客搭建/">博客搭建</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/11/15/hello-world/" data-title="Hello World | 飞花逐月" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/11/16/github博客尝鲜/" data-title="如何搭建github博客系列【1】配置环境 | 飞花逐月" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -146,20 +197,28 @@ var _hmt = _hmt || [];
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/11/16/github博客尝鲜/" title="如何搭建github博客系列【1】配置环境">
+ <a href="/2017/01/09/如何更改自带的主题？/" title="如何更改自带的主题？">
   <strong>新一篇:</strong><br/>
   <span>
-  如何搭建github博客系列【1】配置环境</span>
+  如何更改自带的主题？</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2016/11/15/hello-world/"  title="Hello World">
+ <strong>旧一篇:</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
 
 </nav>
 
 	
 <section class="comment">
 	
-	<div class="ds-thread" data-title="Hello World" data-thread-key="hello-world" data-author-key="AlbertLee" data-url="http://yoursite.com/post/hello-world"></div>
+	<div class="ds-thread" data-title="如何搭建github博客系列【1】配置环境" data-thread-key="github博客尝鲜" data-author-key="AlbertLee" data-url="http://yoursite.com/post/github博客尝鲜"></div>
 	
 </section>
 

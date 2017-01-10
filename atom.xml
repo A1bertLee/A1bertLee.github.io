@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-16T08:02:06.715Z</updated>
+  <updated>2017-01-09T03:58:32.873Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,16 +16,155 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>如何搭建github博客系列【1】</title>
-    <link href="http://yoursite.com/2016/11/16/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%901%E3%80%91/"/>
-    <id>http://yoursite.com/2016/11/16/如何搭建github博客系列【1】/</id>
-    <published>2016-11-16T08:02:06.000Z</published>
-    <updated>2016-11-16T08:02:06.715Z</updated>
+    <title>如何将Tinnypp私有化？</title>
+    <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E5%B0%86Tinnypp%E7%A7%81%E6%9C%89%E5%8C%96%EF%BC%9F/"/>
+    <id>http://yoursite.com/2017/01/09/如何将Tinnypp私有化？/</id>
+    <published>2017-01-09T03:57:20.000Z</published>
+    <updated>2017-01-09T03:58:32.873Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何更改自带的主题？</title>
+    <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E8%87%AA%E5%B8%A6%E7%9A%84%E4%B8%BB%E9%A2%98%EF%BC%9F/"/>
+    <id>http://yoursite.com/2017/01/09/如何更改自带的主题？/</id>
+    <published>2017-01-09T03:24:15.000Z</published>
+    <updated>2017-01-09T03:55:37.396Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
+<h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
+<blockquote>
+<p><strong>_config.yml</strong> 全局配置文件。要注意的是，该文件格式要求极为严格，缺少一个空格都会导致运行错误。小提示：不要用Tab缩进，两个空格符， 冒号：后面只用一个空格即可 。<br><strong>themes</strong> 存放主题的文件夹<br><strong>source</strong> 博客资源文件夹<br><strong>source/_drafts</strong> 草稿文件夹<br><strong>source/_posts</strong> 文章文件夹<br><strong>themes/landscape</strong> 默认皮肤文件夹<br>…</p>
+</blockquote>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>建立了Hexo文件之后就可以下载主题了，在themes文件夹下使用git命令：</p>
+<blockquote>
+<p>$ git clone <a href="https://github.com/A1bertLee/Tinnypp" target="_blank" rel="external">https://github.com/A1bertLee/Tinnypp</a></p>
+</blockquote>
+<p>上面的是https格式的链接，ssh也可以。</p>
+<h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><ul>
+<li><p><strong>修改参数</strong> 修改Hexo目录下的config.yml(Hexo有两个config.yml文件，一个在根目录，一个在theme下，此时修改的是在根目录下的)配置文件中的theme属性，将其设置为Tinnypp（相应的主题名字）。<br>同时请设置stylus属性中的compress值为true。</p>
+<blockquote>
+<p>theme: Tinnypp</p>
+</blockquote>
+</li>
+<li><p><strong>注意：</strong> 为避免出错，请先备份你的_config.yml 文件后再升级。</p>
+</li>
+<li><p><strong>本地查看调试</strong></p>
+<blockquote>
+<p>$ hexo clean #清理之前生成html文件<br>$ hexo g #生成html文件<br>$ hexo s #启动本地服务，进行文章预览调试</p>
+</blockquote>
+</li>
+</ul>
+<p>浏览器输入：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>  查看搭建效果。此后的每次变更_config.yml文件或者上传文件以及改动没有效果，都可以先这三个命令调试，非常好用，尤其是当你想调试出自己想要的主题时。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。&lt;/p&gt;
+&lt;h2
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何搭建github博客系列【1】配置环境</title>
+    <link href="http://yoursite.com/2016/11/16/github%E5%8D%9A%E5%AE%A2%E5%B0%9D%E9%B2%9C/"/>
+    <id>http://yoursite.com/2016/11/16/github博客尝鲜/</id>
+    <published>2016-11-16T08:02:06.000Z</published>
+    <updated>2017-01-09T02:56:44.554Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><p>Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。SSH Keys，不配置的话以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要了，配置方法见网上。</p>
+<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
+<li><p><strong>安装Node（必须）</strong><br>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可</p>
+</li>
+<li><p><strong>安装Git（必须）</strong><br>作用：把本地的hexo内容提交到github上去. 安装Xcode就自带有Git，我就不多说了。默认安装即可</p>
+</li>
+</ul>
+<h2 id="正式安装HEXO"><a href="#正式安装HEXO" class="headerlink" title="正式安装HEXO　"></a>正式安装HEXO　</h2><p>Node和Git都安装好后，可执行如下命令：</p>
+<blockquote>
+<p>$ npm install -g hexo</p>
+</blockquote>
+<h2 id="HEXO基本使用"><a href="#HEXO基本使用" class="headerlink" title="HEXO基本使用"></a>HEXO基本使用</h2><ul>
+<li><strong>初始化hexo</strong><br>创建一个文件夹，如：Blog，cd到Blog里执行hexo init命令：<blockquote>
+<p>$ hexo init</p>
+</blockquote>
+</li>
+</ul>
+<p>好啦，至此，全部安装工作已经完成！</p>
+<ul>
+<li><p><strong>生成静态页面</strong><br>继续再Blog目录下执行如下命令，生成静态页面</p>
+<blockquote>
+<p>hexo generate （hexo g  也可以）</p>
+</blockquote>
+</li>
+<li><p><strong>本地启动测试</strong><br>启动本地服务，进行文章预览调试，命令：</p>
+<blockquote>
+<p>$ hexo s（启动本地服务器测试）</p>
+</blockquote>
+</li>
+</ul>
+<p>然后在浏览器输入<strong><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></strong></p>
+<blockquote>
+<p><strong> 注意 </strong><br>如果已经有了hexo blog文件夹，只是电脑重装了或者在一台没有此类环境的电脑里使用的话，只需要安装好环境以及安装hexo即可进行本地启动，无需再初始化以及生成静态页面了。</p>
+</blockquote>
+<p>虽然很简陋，但好歹有了一个属于自己的小窝了。参考链接，本地已经简单的设置好了。当然现在域名和服务器都是基于自己的电脑，还需要跟github进行关联。</p>
+<h2 id="常见错误一览"><a href="#常见错误一览" class="headerlink" title="常见错误一览"></a>常见错误一览</h2><p><strong> 常见的HEXO配置错误 </strong></p>
+<p>ERROR Plugin load failed: hexo-server<br>原因： Besides, utilities are separated into a standalone module. hexo.util is not reachable anymore.<br>解决方法，执行命令：</p>
+<blockquote>
+<p>$ sudo npm install hexo-server</p>
+</blockquote>
+<p>执行命令：</p>
+<blockquote>
+<p>hexo server，提示：Usage: hexo<command> ….</p>
+</blockquote>
+<p>原因：我认为是没有生成本地服务</p>
+<p>解决方法，执行命令：</p>
+<blockquote>
+<p>$ npm install hexo-server –save</p>
+</blockquote>
+<p>提示：hexo-server@0.1.2 node_modules/hexo-server<br>….<br>表示成功了！  <a href="https://hexo.io/zh-cn/docs/server.html" target="_blank" rel="external">参考</a></p>
+<p>这个时候再执行：</p>
+<blockquote>
+<p>$ hexo-server</p>
+</blockquote>
+<p>得到：INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>这个时候再点击：<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a>.<br>正常情况下应该是最原始的画面，但是我看到的是： 白板和Cannot GET / 几个字 原因： 由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
+<blockquote>
+<p>npm install hexo-renderer-ejs –save<br>npm install hexo-renderer-stylus –save<br>npm install hexo-renderer-marked –save</p>
+</blockquote>
+<p>这个时候再重新生成静态文件，启动本地服务器：再点击网址<a href="http://0.0.0.0:4000" target="_blank" rel="external">http://0.0.0.0:4000</a><br>OK！终于可以看到属于你自己的blog啦！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;申请github账号&quot;&gt;&lt;a href=&quot;#申请github账号&quot; class=&quot;headerlink&quot; title=&quot;申请github账号&quot;&gt;&lt;/a&gt;申请github账号&lt;/h2&gt;&lt;p&gt;Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
