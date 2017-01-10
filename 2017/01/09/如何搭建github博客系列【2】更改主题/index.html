@@ -148,17 +148,21 @@ var _hmt = _hmt || [];
 <p>$ npm install hexo-generator-feed –save<br>npm WARN optional dep failed, continuing fsevents@1.0.17<br>hexo-generator-feed@1.2.0 node_modules\hexo-generator-feed<br>├── object-assign@4.1.0<br>└── nunjucks@2.5.2 (asap@2.0.5, yargs@3.32.0, chokidar@1.6.1)</p>
 </blockquote>
 <ul>
-<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）<br><pre><code><br>plugin: </code></pre></li>
+<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）</li>
 </ul>
+<blockquote>
+<p>plugin: </p>
 <ul>
 <li>hexo-generator-feed<br>//Feed Atom<br>feed:<pre><code>type: atom
 path: atom.xml
 limit: 20
-</code></pre>  //type 表示类型, 是 atom 还是 rss2.<br>  //path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>  //limit 最多多少篇最近文章<br><br>然后在\themes\Tinnypp目录下的_config.yml中添加：<blockquote>
+</code></pre>  //type 表示类型, 是 atom 还是 rss2.<br>  //path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>  //limit 最多多少篇最近文章</li>
+</ul>
+</blockquote>
+<p>然后在\themes\Tinnypp目录下的_config.yml中添加：</p>
+<blockquote>
 <p>rss:  /atom.xml</p>
 </blockquote>
-</li>
-</ul>
 <ul>
 <li>重新生成html。<blockquote>
 <p>$ hexo clean #清理之前生成html文件<br>$ hexo g #生成html文件<br>$ hexo s #启动本地服务，进行文章预览调试</p>

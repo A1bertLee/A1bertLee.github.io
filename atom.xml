@@ -129,7 +129,7 @@
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%902%E3%80%91%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【2】更改主题/</id>
     <published>2017-01-09T03:24:15.000Z</published>
-    <updated>2017-01-10T06:17:56.404Z</updated>
+    <updated>2017-01-10T06:19:48.408Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
 <h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
@@ -168,17 +168,21 @@
 <p>$ npm install hexo-generator-feed –save<br>npm WARN optional dep failed, continuing fsevents@1.0.17<br>hexo-generator-feed@1.2.0 node_modules\hexo-generator-feed<br>├── object-assign@4.1.0<br>└── nunjucks@2.5.2 (asap@2.0.5, yargs@3.32.0, chokidar@1.6.1)</p>
 </blockquote>
 <ul>
-<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）<br><pre><code><br>plugin: </code></pre></li>
+<li>添加配置。在博客根目录的_config.yml中加入以下代码：（注释符”//“用”#”代替）</li>
 </ul>
+<blockquote>
+<p>plugin: </p>
 <ul>
 <li>hexo-generator-feed<br>//Feed Atom<br>feed:<pre><code>type: atom
 path: atom.xml
 limit: 20
-</code></pre>  //type 表示类型, 是 atom 还是 rss2.<br>  //path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>  //limit 最多多少篇最近文章<br><br>然后在\themes\Tinnypp目录下的_config.yml中添加：<blockquote>
+</code></pre>  //type 表示类型, 是 atom 还是 rss2.<br>  //path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>  //limit 最多多少篇最近文章</li>
+</ul>
+</blockquote>
+<p>然后在\themes\Tinnypp目录下的_config.yml中添加：</p>
+<blockquote>
 <p>rss:  /atom.xml</p>
 </blockquote>
-</li>
-</ul>
 <ul>
 <li>重新生成html。<blockquote>
 <p>$ hexo clean #清理之前生成html文件<br>$ hexo g #生成html文件<br>$ hexo s #启动本地服务，进行文章预览调试</p>
