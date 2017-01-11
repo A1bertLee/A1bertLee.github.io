@@ -9,9 +9,10 @@
     
     <meta name="author" content="AlbertLee">
     
-    <meta name="description" content="前言个人博客信息首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：
+    <meta name="description" content="前言本文将介绍基本的主题个人信息的私有化，不会涉及主题架构的改变。如果在学习的过程中遇见什么问题，欢迎留言反馈！
+个人博客信息首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：
 
-title: 飞花逐月subtitle: 我的个人博客description: 学习总结 思考感悟 知识管理 展示交流author: AlbertLeeemail: 1075166573@qq.com #联">
+title: 飞花逐月subtitle: 我的个人博客description: 学习总结 思考感">
     
     
     
@@ -107,18 +108,37 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个人博客信息"><span class="toc-number">2.</span> <span class="toc-text">个人博客信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题自定义配置"><span class="toc-number">3.</span> <span class="toc-text">主题自定义配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义评论功能"><span class="toc-number">4.</span> <span class="toc-text">自定义评论功能</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#个人博客信息"><span class="toc-number">2.</span> <span class="toc-text">个人博客信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题自定义配置"><span class="toc-number">3.</span> <span class="toc-text">主题自定义配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义评论功能"><span class="toc-number">4.</span> <span class="toc-text">自定义评论功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加关于模块"><span class="toc-number">5.</span> <span class="toc-text">添加关于模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加404页面"><span class="toc-number">6.</span> <span class="toc-text">添加404页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站内搜索"><span class="toc-number">7.</span> <span class="toc-text">添加站内搜索</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改博客最底部版权信息"><span class="toc-number">8.</span> <span class="toc-text">修改博客最底部版权信息</span></a></li></ol>
 		</div>
 		
-		<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="个人博客信息"><a href="#个人博客信息" class="headerlink" title="个人博客信息"></a>个人博客信息</h2><p>首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：</p>
+		<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍基本的主题个人信息的私有化，不会涉及主题架构的改变。如果在学习的过程中遇见什么问题，欢迎留言反馈！</p>
+<h2 id="个人博客信息"><a href="#个人博客信息" class="headerlink" title="个人博客信息"></a>个人博客信息</h2><p>首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：</p>
 <blockquote>
-<p>title: 飞花逐月<br>subtitle: 我的个人博客<br>description: 学习总结 思考感悟 知识管理 展示交流<br>author: AlbertLee<br>email: 1075166573@qq.com #联系邮箱<br>language: zh-CN<br>timezone:<br>deploy:<br>  type: git<br>  repository: git@github.com:A1bertLee/A1bertLee.github.io.git<br>  branch: master</p>
+<p>title: 飞花逐月<br>subtitle: 我的个人博客<br>description: 学习总结 思考感悟 知识管理 展示交流<br>author: AlbertLee<br>email: 1075166573@qq.com #联系邮箱<br>language: zh-CN</p>
 </blockquote>
-<h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：</p>
+<h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：<br>（下面需要用到的一些文件都在主题目录下）</p>
 <blockquote>
-<p>menu:<br>  首页: /<br>  归档: /archives<br>  关于我: /about   ##不需要可以不用加<br>profile:<br>  enable: true<br>  href: <a href="https://a1bertlee.github.io/" target="_blank" rel="external">https://a1bertlee.github.io/</a><br>rss: /atom.xml     ## RSS address.<br>imglogo:<br>  enable: false            ## display image logo true/false.<br>  src: img/logo.svg        ## <code>.svg</code> and <code>.png</code> are recommended,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>favicon: img/favicon.ico   ## size:32px<em>32px,<code>.ico</code> is recommended,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>apple_icon: img/myLogo.jpg ## size:114px</em>114px,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>author_img_enable: true ## display author avatar picture<br>dataURI: false<br>author_img_data: ‘’<br>author_img: img/myLogo.jpg ## size:220px*220px.<br>author:<br>  google_plus: ## eg:116338260303228776998 for <a href="https://plus.google.com/u/0/116338260303228776998" target="_blank" rel="external">https://plus.google.com/u/0/116338260303228776998</a><br>  intro_line1: ‘AlbertLee’    ## eg: “Hello ,I’m Larry Page in Google.”<br>  intro_line2: ‘编程爱好者’   ## eg: “This is my blog,believe it or not.”<br>  weibo:          ## e.g. 436062867 for <a href="http://weibo.com/436062867" target="_blank" rel="external">http://weibo.com/436062867</a><br>  twitter:        ## e.g. yangjiansky for <a href="https://twitter.com/yangjiansky" target="_blank" rel="external">https://twitter.com/yangjiansky</a><br>  github: ‘A1bertLee’      ## e.g. A1bertLee for <a href="https://github.com/A1bertLee" target="_blank" rel="external">https://github.com/A1bertLee</a><br>  facebook:       ## e.g. yangjian for <a href="https://favebook.com/yangjian" target="_blank" rel="external">https://favebook.com/yangjian</a><br>  tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.<br>duoshuo:<br>  enable: true  ## duoshuo.com<br>  short_name:  a1bertlee  ##your duoshuo short name.</p>
+<p>menu:<br>  首页: /<br>  归档: /archives<br>  关于我: /about   ##不需要可以不用加<br>profile:<br>  enable: true<br>  href: <a href="https://a1bertlee.github.io/" target="_blank" rel="external">https://a1bertlee.github.io/</a><br>rss: /atom.xml     ## RSS address.<br>imglogo:<br>  enable: false            ## display image logo true/false.<br>  src: img/logo.svg        ## 推荐<code>.svg</code> and <code>.png</code> 格式，可以使用自己定义的logo.<br>favicon: img/favicon.ico   ## size:32px<em>32px,推荐<code>.ico</code>格式的,这个文件是标签页图标.<br>apple_icon: img/myLogo.jpg ## size:114px</em>114px,这个图片是个人头像.<br>author_img_enable: true ## display author avatar picture<br>dataURI: false<br>author_img_data: ‘’<br>author_img: img/myLogo.jpg ## size:220px*220px.<br>author:<br>  google_plus: ## eg:116338260303228776998 for <a href="https://plus.google.com/u/0/116338260303228776998" target="_blank" rel="external">https://plus.google.com/u/0/116338260303228776998</a><br>  intro_line1: ‘AlbertLee’    ## eg: “Hello ,I’m Larry Page in Google.”<br>  intro_line2: ‘编程爱好者’   ## eg: “This is my blog,believe it or not.”<br>  weibo:          ## e.g. 436062867 for <a href="http://weibo.com/436062867" target="_blank" rel="external">http://weibo.com/436062867</a><br>  twitter:        ## e.g. yangjiansky for <a href="https://twitter.com/yangjiansky" target="_blank" rel="external">https://twitter.com/yangjiansky</a><br>  github: ‘A1bertLee’      ## e.g. A1bertLee for <a href="https://github.com/A1bertLee" target="_blank" rel="external">https://github.com/A1bertLee</a><br>  facebook:       ## e.g. yangjian for <a href="https://favebook.com/yangjian" target="_blank" rel="external">https://favebook.com/yangjian</a><br>  tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.<br>duoshuo: ##需要先注册多说<br>  enable: true  ## duoshuo.com<br>  short_name:  a1bertlee  ##your duoshuo short name.</p>
 </blockquote>
 <h2 id="自定义评论功能"><a href="#自定义评论功能" class="headerlink" title="自定义评论功能"></a>自定义评论功能</h2><p>随后在themes/Tinnypp/source/js/embed.js这个文件中第二个函数中的判断e.user_id部分加上自己的多说ID。<br>如果你需要做评论中突出自己的博主身份，则在themes\Tinnypp\layout_partial下的after_footer.ejs文件中将140行那里按照提示做更改即可。</p>
+<h2 id="添加关于模块"><a href="#添加关于模块" class="headerlink" title="添加关于模块"></a>添加关于模块</h2><p>如果你在上面的menu那里加上了about模块，那就需要在根目录的source下新建“about”文件夹，并在其中新建一个index.md文件。</p>
+<h2 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h2><p>新建一个404.html , 404页面放在source根目录下就好了。<br>要注意的是，首先要在文件内容中添加以下</p>
+<pre><code>layout: false
+title: &quot;404&quot;
+---
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;   
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;宝贝，公益404带你们回家&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.qq.com/404/search_children.js&quot; charset=&quot;utf-8&quot; homePageUrl=&quot;https://a1bertlee.github.io/&quot; homePageName=&quot;回到我的主页&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>不过需要注意的是，如果没有绑定域名的话是无法创建404 页面，可能只会跳转到github默认404，page绑定域名的话可使用腾讯公益404页面。部分还需要绑定一下自定义的404。</p>
+<h2 id="添加站内搜索"><a href="#添加站内搜索" class="headerlink" title="添加站内搜索"></a>添加站内搜索</h2><p>后面会继续补充，暂时可以忽略！</p>
+<h2 id="修改博客最底部版权信息"><a href="#修改博客最底部版权信息" class="headerlink" title="修改博客最底部版权信息"></a>修改博客最底部版权信息</h2><p>等待补充。。。</p>
   
 	</div>
 		<footer class="article-footer clearfix">

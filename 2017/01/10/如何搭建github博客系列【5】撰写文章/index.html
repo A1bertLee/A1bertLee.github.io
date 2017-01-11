@@ -9,12 +9,12 @@
     
     <meta name="author" content="AlbertLee">
     
-    <meta name="description" content="配置文章模板在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。---
-title: 如何搭建github博客系列【5】撰写文章
-date: 1484017089000
+    <meta name="description" content="配置文章模板在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。title: {{ title }}
+date: {{ date }}
 tags:
 categories: 
----每当使用下面的命令后，会生成带">
+---
+每当使用下面的命令后，会生成带上面标题的markdown文件，">
     
     
     
@@ -110,15 +110,15 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置文章模板"><span class="toc-number">1.</span> <span class="toc-text">配置文章模板</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置文章模板"><span class="toc-number">1.</span> <span class="toc-text">配置文章模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在scaffolds文件下的将post-md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。"><span class="toc-number">2.</span> <span class="toc-text">在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。</span></a></li></ol>
 		</div>
 		
-		<h2 id="配置文章模板"><a href="#配置文章模板" class="headerlink" title="配置文章模板"></a>配置文章模板</h2><p>在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。<br><code>---
-title: 如何搭建github博客系列【5】撰写文章
-date: 1484017089000
+		<h2 id="配置文章模板"><a href="#配置文章模板" class="headerlink" title="配置文章模板"></a>配置文章模板</h2><h2 id="在scaffolds文件下的将post-md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。"><a href="#在scaffolds文件下的将post-md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。" class="headerlink" title="在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。"></a>在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。</h2><pre><code>title: {{ title }}
+date: {{ date }}
 tags:
 categories: 
----</code><br>每当使用下面的命令后，会生成带上面标题的markdown文件，规范统一。</p>
+---
+</code></pre><p>每当使用下面的命令后，会生成带上面标题的markdown文件，规范统一。</p>
 <blockquote>
 <p>hexo new [layout] <title>  #hexo new post helloworld</title></p>
 <p>Description:<br>Create a new post.<br>Arguments:<br>  layout  Post layout. Use post, page, draft or whatever you want.<br>  title   Post title. Wrap it with quotations to escape.<br>Options:<br>  -p, –path     Post path. Customize the path of the post.<br>  -r, –replace  Replace the current post if existed.<br>  -s, –slug     Post slug. Customize the URL of the post.</p>

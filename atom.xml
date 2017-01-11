@@ -40,14 +40,14 @@
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%905%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【5】撰写文章/</id>
     <published>2017-01-10T02:58:09.000Z</published>
-    <updated>2017-01-10T14:21:32.000Z</updated>
+    <updated>2017-01-11T04:52:22.559Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="配置文章模板"><a href="#配置文章模板" class="headerlink" title="配置文章模板"></a>配置文章模板</h2><p>在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。<br><code>---
-title: 如何搭建github博客系列【5】撰写文章
-date: 1484017089000
+    <content type="html"><![CDATA[<h2 id="配置文章模板"><a href="#配置文章模板" class="headerlink" title="配置文章模板"></a>配置文章模板</h2><h2 id="在scaffolds文件下的将post-md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。"><a href="#在scaffolds文件下的将post-md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。" class="headerlink" title="在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。"></a>在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。</h2><pre><code>title: {{ title }}
+date: {{ date }}
 tags:
 categories: 
----</code><br>每当使用下面的命令后，会生成带上面标题的markdown文件，规范统一。</p>
+---
+</code></pre><p>每当使用下面的命令后，会生成带上面标题的markdown文件，规范统一。</p>
 <blockquote>
 <p>hexo new [layout] <title>  #hexo new post helloworld</title></p>
 <p>Description:<br>Create a new post.<br>Arguments:<br>  layout  Post layout. Use post, page, draft or whatever you want.<br>  title   Post title. Wrap it with quotations to escape.<br>Options:<br>  -p, –path     Post path. Customize the path of the post.<br>  -r, –replace  Replace the current post if existed.<br>  -s, –slug     Post slug. Customize the URL of the post.</p>
@@ -56,7 +56,7 @@ categories:
     
     <summary type="html">
     
-      &lt;h2 id=&quot;配置文章模板&quot;&gt;&lt;a href=&quot;#配置文章模板&quot; class=&quot;headerlink&quot; title=&quot;配置文章模板&quot;&gt;&lt;/a&gt;配置文章模板&lt;/h2&gt;&lt;p&gt;在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。
+      &lt;h2 id=&quot;配置文章模板&quot;&gt;&lt;a href=&quot;#配置文章模板&quot; class=&quot;headerlink&quot; title=&quot;配置文章模板&quot;&gt;&lt;/a&gt;配置文章模板&lt;/h2&gt;&lt;h2 id=&quot;在scaffolds文件下的将post-md（文章模板）修改一下，为首页右侧信息部分出现标签、类目
     
     </summary>
     
@@ -74,7 +74,7 @@ categories:
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%904%E3%80%91%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【4】上传博客/</id>
     <published>2017-01-10T02:55:51.000Z</published>
-    <updated>2017-01-10T14:17:20.000Z</updated>
+    <updated>2017-01-11T04:58:59.790Z</updated>
     
     <content type="html"><![CDATA[<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
 <li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
@@ -97,7 +97,7 @@ categories:
 </blockquote>
 </li>
 </ul>
-<h2 id="建立Repository仓库"><a href="#建立Repository仓库" class="headerlink" title="建立Repository仓库"></a>建立Repository仓库</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法 然后建立关联，我的Blog在本地/Users/leopard/Blog，Blog是我之前建的东西也全在这里面，有：</p>
+<h2 id="建立Repository仓库"><a href="#建立Repository仓库" class="headerlink" title="建立Repository仓库"></a>建立Repository仓库</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法 然后建立关联，进入本地的Blog，里面有：</p>
 <pre><code>Blog
 　｜
 　｜－－ _config.yml
@@ -128,6 +128,8 @@ categories:
 <blockquote>
 <p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help  #查看帮助<br>hexo version  #查看Hexo的版本</p>
 </blockquote>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>在未绑定域名前，你只能通过<code>A1bertLee.github.io</code>这个形式的地址访问你的博客，绑定域名后就可以通过自己申请的域名进入了，同时还可以通过设置，让百度谷歌爬取你的博客信息，以便于收录你的博客，这样别人就可以通过搜索进入你的博客了，不然别人是找不到你的博客哦！</p>
+<p>至此你的博客基本完成了，当然可以自定义的地方还有很多，需要自己去探索。</p>
 ]]></content>
     
     <summary type="html">
@@ -151,22 +153,42 @@ categories:
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%903%E3%80%91%E4%B8%BB%E9%A2%98%E7%A7%81%E6%9C%89%E5%8C%96/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【3】主题私有化/</id>
     <published>2017-01-09T03:57:20.000Z</published>
-    <updated>2017-01-10T14:01:08.000Z</updated>
+    <updated>2017-01-11T04:50:49.573Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="个人博客信息"><a href="#个人博客信息" class="headerlink" title="个人博客信息"></a>个人博客信息</h2><p>首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：</p>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍基本的主题个人信息的私有化，不会涉及主题架构的改变。如果在学习的过程中遇见什么问题，欢迎留言反馈！</p>
+<h2 id="个人博客信息"><a href="#个人博客信息" class="headerlink" title="个人博客信息"></a>个人博客信息</h2><p>首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：</p>
 <blockquote>
-<p>title: 飞花逐月<br>subtitle: 我的个人博客<br>description: 学习总结 思考感悟 知识管理 展示交流<br>author: AlbertLee<br>email: 1075166573@qq.com #联系邮箱<br>language: zh-CN<br>timezone:<br>deploy:<br>  type: git<br>  repository: git@github.com:A1bertLee/A1bertLee.github.io.git<br>  branch: master</p>
+<p>title: 飞花逐月<br>subtitle: 我的个人博客<br>description: 学习总结 思考感悟 知识管理 展示交流<br>author: AlbertLee<br>email: 1075166573@qq.com #联系邮箱<br>language: zh-CN</p>
 </blockquote>
-<h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：</p>
+<h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：<br>（下面需要用到的一些文件都在主题目录下）</p>
 <blockquote>
-<p>menu:<br>  首页: /<br>  归档: /archives<br>  关于我: /about   ##不需要可以不用加<br>profile:<br>  enable: true<br>  href: <a href="https://a1bertlee.github.io/" target="_blank" rel="external">https://a1bertlee.github.io/</a><br>rss: /atom.xml     ## RSS address.<br>imglogo:<br>  enable: false            ## display image logo true/false.<br>  src: img/logo.svg        ## <code>.svg</code> and <code>.png</code> are recommended,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>favicon: img/favicon.ico   ## size:32px<em>32px,<code>.ico</code> is recommended,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>apple_icon: img/myLogo.jpg ## size:114px</em>114px,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>author_img_enable: true ## display author avatar picture<br>dataURI: false<br>author_img_data: ‘’<br>author_img: img/myLogo.jpg ## size:220px*220px.<br>author:<br>  google_plus: ## eg:116338260303228776998 for <a href="https://plus.google.com/u/0/116338260303228776998" target="_blank" rel="external">https://plus.google.com/u/0/116338260303228776998</a><br>  intro_line1: ‘AlbertLee’    ## eg: “Hello ,I’m Larry Page in Google.”<br>  intro_line2: ‘编程爱好者’   ## eg: “This is my blog,believe it or not.”<br>  weibo:          ## e.g. 436062867 for <a href="http://weibo.com/436062867" target="_blank" rel="external">http://weibo.com/436062867</a><br>  twitter:        ## e.g. yangjiansky for <a href="https://twitter.com/yangjiansky" target="_blank" rel="external">https://twitter.com/yangjiansky</a><br>  github: ‘A1bertLee’      ## e.g. A1bertLee for <a href="https://github.com/A1bertLee" target="_blank" rel="external">https://github.com/A1bertLee</a><br>  facebook:       ## e.g. yangjian for <a href="https://favebook.com/yangjian" target="_blank" rel="external">https://favebook.com/yangjian</a><br>  tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.<br>duoshuo:<br>  enable: true  ## duoshuo.com<br>  short_name:  a1bertlee  ##your duoshuo short name.</p>
+<p>menu:<br>  首页: /<br>  归档: /archives<br>  关于我: /about   ##不需要可以不用加<br>profile:<br>  enable: true<br>  href: <a href="https://a1bertlee.github.io/" target="_blank" rel="external">https://a1bertlee.github.io/</a><br>rss: /atom.xml     ## RSS address.<br>imglogo:<br>  enable: false            ## display image logo true/false.<br>  src: img/logo.svg        ## 推荐<code>.svg</code> and <code>.png</code> 格式，可以使用自己定义的logo.<br>favicon: img/favicon.ico   ## size:32px<em>32px,推荐<code>.ico</code>格式的,这个文件是标签页图标.<br>apple_icon: img/myLogo.jpg ## size:114px</em>114px,这个图片是个人头像.<br>author_img_enable: true ## display author avatar picture<br>dataURI: false<br>author_img_data: ‘’<br>author_img: img/myLogo.jpg ## size:220px*220px.<br>author:<br>  google_plus: ## eg:116338260303228776998 for <a href="https://plus.google.com/u/0/116338260303228776998" target="_blank" rel="external">https://plus.google.com/u/0/116338260303228776998</a><br>  intro_line1: ‘AlbertLee’    ## eg: “Hello ,I’m Larry Page in Google.”<br>  intro_line2: ‘编程爱好者’   ## eg: “This is my blog,believe it or not.”<br>  weibo:          ## e.g. 436062867 for <a href="http://weibo.com/436062867" target="_blank" rel="external">http://weibo.com/436062867</a><br>  twitter:        ## e.g. yangjiansky for <a href="https://twitter.com/yangjiansky" target="_blank" rel="external">https://twitter.com/yangjiansky</a><br>  github: ‘A1bertLee’      ## e.g. A1bertLee for <a href="https://github.com/A1bertLee" target="_blank" rel="external">https://github.com/A1bertLee</a><br>  facebook:       ## e.g. yangjian for <a href="https://favebook.com/yangjian" target="_blank" rel="external">https://favebook.com/yangjian</a><br>  tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.<br>duoshuo: ##需要先注册多说<br>  enable: true  ## duoshuo.com<br>  short_name:  a1bertlee  ##your duoshuo short name.</p>
 </blockquote>
 <h2 id="自定义评论功能"><a href="#自定义评论功能" class="headerlink" title="自定义评论功能"></a>自定义评论功能</h2><p>随后在themes/Tinnypp/source/js/embed.js这个文件中第二个函数中的判断e.user_id部分加上自己的多说ID。<br>如果你需要做评论中突出自己的博主身份，则在themes\Tinnypp\layout_partial下的after_footer.ejs文件中将140行那里按照提示做更改即可。</p>
+<h2 id="添加关于模块"><a href="#添加关于模块" class="headerlink" title="添加关于模块"></a>添加关于模块</h2><p>如果你在上面的menu那里加上了about模块，那就需要在根目录的source下新建“about”文件夹，并在其中新建一个index.md文件。</p>
+<h2 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h2><p>新建一个404.html , 404页面放在source根目录下就好了。<br>要注意的是，首先要在文件内容中添加以下</p>
+<pre><code>layout: false
+title: &quot;404&quot;
+---
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;   
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;宝贝，公益404带你们回家&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;http://www.qq.com/404/search_children.js&quot; charset=&quot;utf-8&quot; homePageUrl=&quot;https://a1bertlee.github.io/&quot; homePageName=&quot;回到我的主页&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>不过需要注意的是，如果没有绑定域名的话是无法创建404 页面，可能只会跳转到github默认404，page绑定域名的话可使用腾讯公益404页面。部分还需要绑定一下自定义的404。</p>
+<h2 id="添加站内搜索"><a href="#添加站内搜索" class="headerlink" title="添加站内搜索"></a>添加站内搜索</h2><p>后面会继续补充，暂时可以忽略！</p>
+<h2 id="修改博客最底部版权信息"><a href="#修改博客最底部版权信息" class="headerlink" title="修改博客最底部版权信息"></a>修改博客最底部版权信息</h2><p>等待补充。。。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;h2 id=&quot;个人博客信息&quot;&gt;&lt;a href=&quot;#个人博客信息&quot; class=&quot;headerlink&quot; title=&quot;个人博客信息&quot;&gt;&lt;/a&gt;个
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文将介绍基本的主题个人信息的私有化，不会涉及主题架构的改变。如果在学习的过程中遇见什么问题，欢迎留言反馈！&lt;/p&gt;
+&lt;h2 id=&quot;个人博
     
     </summary>
     
