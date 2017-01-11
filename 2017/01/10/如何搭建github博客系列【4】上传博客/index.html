@@ -108,7 +108,7 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title"></strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请github账号"><span class="toc-number">1.</span> <span class="toc-text">申请github账号</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#申请github账号"><span class="toc-number">1.</span> <span class="toc-text">申请github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立Repository仓库"><span class="toc-number">2.</span> <span class="toc-text">建立Repository仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成-deploy-git文件夹"><span class="toc-number">3.</span> <span class="toc-text">生成.deploy_git文件夹</span></a></li></ol>
 		</div>
 		
 		<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
@@ -128,12 +128,40 @@ var _hmt = _hmt || [];
 </blockquote>
 <ul>
 <li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
-<p>$ git config –global user.name “your name”//用户名</p>
+<p>$ git config –global user.name “your name”//用户名<br>$ git config –global user.email  “your email”//填写自己的邮箱</p>
 </blockquote>
 </li>
 </ul>
+<h2 id="建立Repository仓库"><a href="#建立Repository仓库" class="headerlink" title="建立Repository仓库"></a>建立Repository仓库</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法 然后建立关联，我的Blog在本地/Users/leopard/Blog，Blog是我之前建的东西也全在这里面，有：</p>
+<pre><code>Blog
+　｜
+　｜－－ _config.yml
+　｜－－ node_modules
+　｜－－ public
+　｜－－ source
+　｜－－ db.json
+　｜－－ package.json
+　｜－－ scaffolds
+　｜－－ themes 　　　　　 　　　
+</code></pre><p>现在我们需要_config.yml文件，来建立关联：<br>进入_config.yml文件中<br>翻到最下面，deploy后面的设置确保是我这样子的，A1bertLee是我的github名称，把它替换成自己的，注意在”: “符号后面要有空格</p>
 <blockquote>
-<p>$ git config –global user.email  “your email”//填写自己的邮箱</p>
+<p>deploy:<br>  type: git<br>  repository: git@github.com:A1bertLee/A1bertLee.github.io.git<br>  branch: master</p>
+</blockquote>
+<h2 id="生成-deploy-git文件夹"><a href="#生成-deploy-git文件夹" class="headerlink" title="生成.deploy_git文件夹"></a>生成.deploy_git文件夹</h2><p>在你一开始创建的hexo_blog目录下，执行如下命令，会生成一个.deploy_git文件夹，随后才能使用git部署。</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>repository后面的链接取决于是否配置好了SSH key，没有的话要输入密码。<br>然后，执行配置命令：</p>
+<blockquote>
+<p>hexo deploy</p>
+</blockquote>
+<p>然后再浏览器中输入完整的地址：<code>http://A1bertLee.github.io/</code>就行了，我的github的账户叫A1bertLee ,把这个改成你 github 的账户名就行了。注意若是你已经更改了主题和文章，你会发现这次deploy后部署的是默认的博客，需要按照以下步骤重新部署覆盖。<br>每次部署按照以下步骤：</p>
+<blockquote>
+<p>hexo clean #清理以前的html文件<br>hexo generate #生成html文件<br>hexo deploy #上传博客</p>
+</blockquote>
+<p><strong>一些常用命令：</strong></p>
+<blockquote>
+<p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help  #查看帮助<br>hexo version  #查看Hexo的版本</p>
 </blockquote>
   
 	</div>

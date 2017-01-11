@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-10T03:02:41.270Z</updated>
+  <updated>2017-01-10T03:02:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%90%E7%BB%AD%E3%80%91%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【续】个人简历/</id>
     <published>2017-01-10T02:58:48.000Z</published>
-    <updated>2017-01-10T03:02:41.270Z</updated>
+    <updated>2017-01-10T03:02:42.000Z</updated>
     
     <summary type="html">
     
@@ -40,9 +40,23 @@
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%905%E3%80%91%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【5】撰写文章/</id>
     <published>2017-01-10T02:58:09.000Z</published>
-    <updated>2017-01-10T03:02:27.771Z</updated>
+    <updated>2017-01-10T14:21:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置文章模板"><a href="#配置文章模板" class="headerlink" title="配置文章模板"></a>配置文章模板</h2><p>在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。<br><code>---
+title: 如何搭建github博客系列【5】撰写文章
+date: 1484017089000
+tags:
+categories: 
+---</code><br>每当使用下面的命令后，会生成带上面标题的markdown文件，规范统一。</p>
+<blockquote>
+<p>hexo new [layout] <title>  #hexo new post helloworld</title></p>
+<p>Description:<br>Create a new post.<br>Arguments:<br>  layout  Post layout. Use post, page, draft or whatever you want.<br>  title   Post title. Wrap it with quotations to escape.<br>Options:<br>  -p, –path     Post path. Customize the path of the post.<br>  -r, –replace  Replace the current post if existed.<br>  -s, –slug     Post slug. Customize the URL of the post.</p>
+</blockquote>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;配置文章模板&quot;&gt;&lt;a href=&quot;#配置文章模板&quot; class=&quot;headerlink&quot; title=&quot;配置文章模板&quot;&gt;&lt;/a&gt;配置文章模板&lt;/h2&gt;&lt;p&gt;在scaffolds文件下的将post.md（文章模板）修改一下，为首页右侧信息部分出现标签、类目提供标记。
     
     </summary>
     
@@ -60,7 +74,7 @@
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%904%E3%80%91%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【4】上传博客/</id>
     <published>2017-01-10T02:55:51.000Z</published>
-    <updated>2017-01-10T03:12:03.229Z</updated>
+    <updated>2017-01-10T14:17:20.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
 <li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
@@ -79,12 +93,40 @@
 </blockquote>
 <ul>
 <li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
-<p>$ git config –global user.name “your name”//用户名</p>
+<p>$ git config –global user.name “your name”//用户名<br>$ git config –global user.email  “your email”//填写自己的邮箱</p>
 </blockquote>
 </li>
 </ul>
+<h2 id="建立Repository仓库"><a href="#建立Repository仓库" class="headerlink" title="建立Repository仓库"></a>建立Repository仓库</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法 然后建立关联，我的Blog在本地/Users/leopard/Blog，Blog是我之前建的东西也全在这里面，有：</p>
+<pre><code>Blog
+　｜
+　｜－－ _config.yml
+　｜－－ node_modules
+　｜－－ public
+　｜－－ source
+　｜－－ db.json
+　｜－－ package.json
+　｜－－ scaffolds
+　｜－－ themes 　　　　　 　　　
+</code></pre><p>现在我们需要_config.yml文件，来建立关联：<br>进入_config.yml文件中<br>翻到最下面，deploy后面的设置确保是我这样子的，A1bertLee是我的github名称，把它替换成自己的，注意在”: “符号后面要有空格</p>
 <blockquote>
-<p>$ git config –global user.email  “your email”//填写自己的邮箱</p>
+<p>deploy:<br>  type: git<br>  repository: git@github.com:A1bertLee/A1bertLee.github.io.git<br>  branch: master</p>
+</blockquote>
+<h2 id="生成-deploy-git文件夹"><a href="#生成-deploy-git文件夹" class="headerlink" title="生成.deploy_git文件夹"></a>生成.deploy_git文件夹</h2><p>在你一开始创建的hexo_blog目录下，执行如下命令，会生成一个.deploy_git文件夹，随后才能使用git部署。</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>repository后面的链接取决于是否配置好了SSH key，没有的话要输入密码。<br>然后，执行配置命令：</p>
+<blockquote>
+<p>hexo deploy</p>
+</blockquote>
+<p>然后再浏览器中输入完整的地址：<code>http://A1bertLee.github.io/</code>就行了，我的github的账户叫A1bertLee ,把这个改成你 github 的账户名就行了。注意若是你已经更改了主题和文章，你会发现这次deploy后部署的是默认的博客，需要按照以下步骤重新部署覆盖。<br>每次部署按照以下步骤：</p>
+<blockquote>
+<p>hexo clean #清理以前的html文件<br>hexo generate #生成html文件<br>hexo deploy #上传博客</p>
+</blockquote>
+<p><strong>一些常用命令：</strong></p>
+<blockquote>
+<p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help  #查看帮助<br>hexo version  #查看Hexo的版本</p>
 </blockquote>
 ]]></content>
     
@@ -109,9 +151,22 @@
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%903%E3%80%91%E4%B8%BB%E9%A2%98%E7%A7%81%E6%9C%89%E5%8C%96/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【3】主题私有化/</id>
     <published>2017-01-09T03:57:20.000Z</published>
-    <updated>2017-01-10T03:02:08.763Z</updated>
+    <updated>2017-01-10T14:01:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="个人博客信息"><a href="#个人博客信息" class="headerlink" title="个人博客信息"></a>个人博客信息</h2><p>首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：</p>
+<blockquote>
+<p>title: 飞花逐月<br>subtitle: 我的个人博客<br>description: 学习总结 思考感悟 知识管理 展示交流<br>author: AlbertLee<br>email: 1075166573@qq.com #联系邮箱<br>language: zh-CN<br>timezone:<br>deploy:<br>  type: git<br>  repository: git@github.com:A1bertLee/A1bertLee.github.io.git<br>  branch: master</p>
+</blockquote>
+<h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：</p>
+<blockquote>
+<p>menu:<br>  首页: /<br>  归档: /archives<br>  关于我: /about   ##不需要可以不用加<br>profile:<br>  enable: true<br>  href: <a href="https://a1bertlee.github.io/" target="_blank" rel="external">https://a1bertlee.github.io/</a><br>rss: /atom.xml     ## RSS address.<br>imglogo:<br>  enable: false            ## display image logo true/false.<br>  src: img/logo.svg        ## <code>.svg</code> and <code>.png</code> are recommended,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>favicon: img/favicon.ico   ## size:32px<em>32px,<code>.ico</code> is recommended,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>apple_icon: img/myLogo.jpg ## size:114px</em>114px,please put image into the theme folder <code>/Tinnypp/source/img</code>.<br>author_img_enable: true ## display author avatar picture<br>dataURI: false<br>author_img_data: ‘’<br>author_img: img/myLogo.jpg ## size:220px*220px.<br>author:<br>  google_plus: ## eg:116338260303228776998 for <a href="https://plus.google.com/u/0/116338260303228776998" target="_blank" rel="external">https://plus.google.com/u/0/116338260303228776998</a><br>  intro_line1: ‘AlbertLee’    ## eg: “Hello ,I’m Larry Page in Google.”<br>  intro_line2: ‘编程爱好者’   ## eg: “This is my blog,believe it or not.”<br>  weibo:          ## e.g. 436062867 for <a href="http://weibo.com/436062867" target="_blank" rel="external">http://weibo.com/436062867</a><br>  twitter:        ## e.g. yangjiansky for <a href="https://twitter.com/yangjiansky" target="_blank" rel="external">https://twitter.com/yangjiansky</a><br>  github: ‘A1bertLee’      ## e.g. A1bertLee for <a href="https://github.com/A1bertLee" target="_blank" rel="external">https://github.com/A1bertLee</a><br>  facebook:       ## e.g. yangjian for <a href="https://favebook.com/yangjian" target="_blank" rel="external">https://favebook.com/yangjian</a><br>  tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.<br>duoshuo:<br>  enable: true  ## duoshuo.com<br>  short_name:  a1bertlee  ##your duoshuo short name.</p>
+</blockquote>
+<h2 id="自定义评论功能"><a href="#自定义评论功能" class="headerlink" title="自定义评论功能"></a>自定义评论功能</h2><p>随后在themes/Tinnypp/source/js/embed.js这个文件中第二个函数中的判断e.user_id部分加上自己的多说ID。<br>如果你需要做评论中突出自己的博主身份，则在themes\Tinnypp\layout_partial下的after_footer.ejs文件中将140行那里按照提示做更改即可。</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;h2 id=&quot;个人博客信息&quot;&gt;&lt;a href=&quot;#个人博客信息&quot; class=&quot;headerlink&quot; title=&quot;个人博客信息&quot;&gt;&lt;/a&gt;个
     
     </summary>
     
@@ -129,7 +184,7 @@
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%902%E3%80%91%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【2】更改主题/</id>
     <published>2017-01-09T03:24:15.000Z</published>
-    <updated>2017-01-10T06:42:50.320Z</updated>
+    <updated>2017-01-10T07:05:00.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
 <h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
@@ -168,7 +223,7 @@
 </blockquote>
 <ul>
 <li><strong>添加配置</strong>。在博客根目录的_config.yml中加入以下代码：<blockquote>
-<p>plugin: hexo-generator-feed<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p>
+<p>plugins: hexo-generator-feed<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p>
 </blockquote>
 </li>
 </ul>
@@ -206,7 +261,7 @@
     <link href="http://yoursite.com/2016/11/16/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%901%E3%80%91%E6%9C%AC%E5%9C%B0%E5%B0%9D%E9%B2%9C/"/>
     <id>http://yoursite.com/2016/11/16/如何搭建github博客系列【1】本地尝鲜/</id>
     <published>2016-11-16T08:02:06.000Z</published>
-    <updated>2017-01-10T04:27:31.796Z</updated>
+    <updated>2017-01-10T04:27:32.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
 <li><p><strong>安装Node（必须）</strong><br>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。默认安装即可</p>
