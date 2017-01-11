@@ -74,7 +74,7 @@ categories:
     <link href="http://yoursite.com/2017/01/10/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%904%E3%80%91%E4%B8%8A%E4%BC%A0%E5%8D%9A%E5%AE%A2/"/>
     <id>http://yoursite.com/2017/01/10/如何搭建github博客系列【4】上传博客/</id>
     <published>2017-01-10T02:55:51.000Z</published>
-    <updated>2017-01-11T04:58:59.790Z</updated>
+    <updated>2017-01-11T05:14:22.851Z</updated>
     
     <content type="html"><![CDATA[<h2 id="申请github账号"><a href="#申请github账号" class="headerlink" title="申请github账号"></a>申请github账号</h2><ul>
 <li><p><strong>github账号</strong> Github主要用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲。 github账号没有的话直接申请就行了，跟一般的注册账号差不多。</p>
@@ -83,19 +83,17 @@ categories:
 </li>
 <li><p><strong>测试Key</strong> 可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
 <blockquote>
-<p>$ ssh -T git@github.com<br>如果是下面的反馈：<br>The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>Are you sure you want to continue connecting (yes/no)?</p>
+<p>$ ssh -T git@github.com<br>如果是下面的反馈：</p>
 </blockquote>
+<p>  The authenticity of host ‘github.com (207.97.227.239)’ can’t be established.<br>  RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.<br>  Are you sure you want to continue connecting (yes/no)?</p>
 </li>
 </ul>
-<p>不要紧张，输入yes就好，然后会看到：</p>
-<blockquote>
-<p>Hi A1bertLee! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
-</blockquote>
+<p>不要紧张，输入yes就好，然后会看到：<br>    Hi A1bertLee! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <ul>
-<li><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<blockquote>
-<p>$ git config –global user.name “your name”//用户名<br>$ git config –global user.email  “your email”//填写自己的邮箱</p>
-</blockquote>
-</li>
+<li><p><strong>设置用户信息</strong> 现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</p>
+<pre><code>$ git config --global user.name &quot;your name&quot;//用户名
+$ git config --global user.email  &quot;your email&quot;//填写自己的邮箱
+</code></pre></li>
 </ul>
 <h2 id="建立Repository仓库"><a href="#建立Repository仓库" class="headerlink" title="建立Repository仓库"></a>建立Repository仓库</h2><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法 然后建立关联，进入本地的Blog，里面有：</p>
 <pre><code>Blog
@@ -109,10 +107,11 @@ categories:
 　｜－－ scaffolds
 　｜－－ themes 　　　　　 　　　
 </code></pre><p>现在我们需要_config.yml文件，来建立关联：<br>进入_config.yml文件中<br>翻到最下面，deploy后面的设置确保是我这样子的，A1bertLee是我的github名称，把它替换成自己的，注意在”: “符号后面要有空格</p>
-<blockquote>
-<p>deploy:<br>  type: git<br>  repository: git@github.com:A1bertLee/A1bertLee.github.io.git<br>  branch: master</p>
-</blockquote>
-<h2 id="生成-deploy-git文件夹"><a href="#生成-deploy-git文件夹" class="headerlink" title="生成.deploy_git文件夹"></a>生成.deploy_git文件夹</h2><p>在你一开始创建的hexo_blog目录下，执行如下命令，会生成一个.deploy_git文件夹，随后才能使用git部署。</p>
+<pre><code>deploy:
+  type: git
+  repository: git@github.com:A1bertLee/A1bertLee.github.io.git
+  branch: master
+</code></pre><h2 id="生成-deploy-git文件夹"><a href="#生成-deploy-git文件夹" class="headerlink" title="生成.deploy_git文件夹"></a>生成.deploy_git文件夹</h2><p>在你一开始创建的hexo_blog目录下，执行如下命令，会生成一个.deploy_git文件夹，随后才能使用git部署。</p>
 <blockquote>
 <p>npm install hexo-deployer-git –save</p>
 </blockquote>
@@ -121,14 +120,18 @@ categories:
 <p>hexo deploy</p>
 </blockquote>
 <p>然后再浏览器中输入完整的地址：<code>http://A1bertLee.github.io/</code>就行了，我的github的账户叫A1bertLee ,把这个改成你 github 的账户名就行了。注意若是你已经更改了主题和文章，你会发现这次deploy后部署的是默认的博客，需要按照以下步骤重新部署覆盖。<br>每次部署按照以下步骤：</p>
-<blockquote>
-<p>hexo clean #清理以前的html文件<br>hexo generate #生成html文件<br>hexo deploy #上传博客</p>
-</blockquote>
-<p><strong>一些常用命令：</strong></p>
-<blockquote>
-<p>hexo new “postName” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo generate #生成静态页面至public目录<br>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy #将.deploy目录部署到GitHub<br>hexo help  #查看帮助<br>hexo version  #查看Hexo的版本</p>
-</blockquote>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>在未绑定域名前，你只能通过<code>A1bertLee.github.io</code>这个形式的地址访问你的博客，绑定域名后就可以通过自己申请的域名进入了，同时还可以通过设置，让百度谷歌爬取你的博客信息，以便于收录你的博客，这样别人就可以通过搜索进入你的博客了，不然别人是找不到你的博客哦！</p>
+<pre><code>hexo clean #清理以前的html文件
+hexo generate #生成html文件
+hexo deploy #上传博客
+</code></pre><p><strong>一些常用命令：</strong></p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成静态页面至public目录
+hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）
+hexo deploy #将.deploy目录部署到GitHub
+hexo help  #查看帮助
+hexo version  #查看Hexo的版本
+</code></pre><h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>在未绑定域名前，你只能通过<code>A1bertLee.github.io</code>这个形式的地址访问你的博客，绑定域名后就可以通过自己申请的域名进入了，同时还可以通过设置，让百度谷歌爬取你的博客信息，以便于收录你的博客，这样别人就可以通过搜索进入你的博客了，不然别人是找不到你的博客哦！</p>
 <p>至此你的博客基本完成了，当然可以自定义的地方还有很多，需要自己去探索。</p>
 ]]></content>
     
@@ -153,15 +156,47 @@ categories:
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%903%E3%80%91%E4%B8%BB%E9%A2%98%E7%A7%81%E6%9C%89%E5%8C%96/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【3】主题私有化/</id>
     <published>2017-01-09T03:57:20.000Z</published>
-    <updated>2017-01-11T05:04:53.784Z</updated>
+    <updated>2017-01-11T05:09:35.621Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍基本的主题个人信息的私有化，不会涉及主题架构的改变。如果在学习的过程中遇见什么问题，欢迎留言反馈！</p>
 <h2 id="个人博客信息"><a href="#个人博客信息" class="headerlink" title="个人博客信息"></a>个人博客信息</h2><p>首先将博客根目录下的_config.yml配置文件中需要自定义的部分弄好：</p>
-<blockquote>
-<p>title: 飞花逐月<br>subtitle: 我的个人博客<br>description: 学习总结 思考感悟 知识管理 展示交流<br>author: AlbertLee<br>email: 1075166573@qq.com #联系邮箱<br>language: zh-CN</p>
-</blockquote>
-<h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：<br>（下面需要用到的一些文件都在主题目录下）<br>          menu:<br>          首页: /<br>          归档: /archives<br>          关于我: /about   ##不需要可以不用加<br>        profile:<br>          enable: true<br>          href: <a href="https://a1bertlee.github.io/" target="_blank" rel="external">https://a1bertlee.github.io/</a><br>        rss: /atom.xml     ## RSS address.<br>        imglogo:<br>          enable: false            ## display image logo true/false.<br>          src: img/logo.svg        ## 推荐<code>.svg</code> and <code>.png</code> 格式，可以使用自己定义的logo.<br>        favicon: img/favicon.ico   ## size:32px<em>32px,推荐<code>.ico</code>格式的,这个文件是标签页图标.<br>        apple_icon: img/myLogo.jpg ## size:114px</em>114px,这个图片是个人头像.<br>        author_img_enable: true ## display author avatar picture<br>        dataURI: false<br>        author_img_data: ‘’<br>        author_img: img/myLogo.jpg ## size:220px*220px.<br>        author:<br>          google_plus: ## eg:116338260303228776998 for <a href="https://plus.google.com/u/0/116338260303228776998" target="_blank" rel="external">https://plus.google.com/u/0/116338260303228776998</a><br>          intro_line1: ‘AlbertLee’    ## eg: “Hello ,I’m Larry Page in Google.”<br>          intro_line2: ‘编程爱好者’   ## eg: “This is my blog,believe it or not.”<br>          weibo:          ## e.g. 436062867 for <a href="http://weibo.com/436062867" target="_blank" rel="external">http://weibo.com/436062867</a><br>          twitter:        ## e.g. yangjiansky for <a href="https://twitter.com/yangjiansky" target="_blank" rel="external">https://twitter.com/yangjiansky</a><br>          github: ‘A1bertLee’      ## e.g. A1bertLee for <a href="https://github.com/A1bertLee" target="_blank" rel="external">https://github.com/A1bertLee</a><br>          facebook:       ## e.g. yangjian for <a href="https://favebook.com/yangjian" target="_blank" rel="external">https://favebook.com/yangjian</a><br>          tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.<br>        duoshuo: ##需要先注册多说<br>          enable: true  ## duoshuo.com<br>          short_name:  a1bertlee  ##your duoshuo short name.</p>
-<h2 id="自定义评论功能"><a href="#自定义评论功能" class="headerlink" title="自定义评论功能"></a>自定义评论功能</h2><p>随后在themes/Tinnypp/source/js/embed.js这个文件中第二个函数中的判断e.user_id部分加上自己的多说ID。<br>如果你需要做评论中突出自己的博主身份，则在themes\Tinnypp\layout_partial下的after_footer.ejs文件中将140行那里按照提示做更改即可。</p>
+<pre><code>title: 飞花逐月
+subtitle: 我的个人博客
+description: 学习总结 思考感悟 知识管理 展示交流
+author: AlbertLee
+email: 1075166573@qq.com #联系邮箱
+language: zh-CN
+</code></pre><h2 id="主题自定义配置"><a href="#主题自定义配置" class="headerlink" title="主题自定义配置"></a>主题自定义配置</h2><p>进入/themes/Tinnypp/_config.yml配置文件中：<br>（下面需要用到的一些文件都在主题目录下）</p>
+<pre><code>menu:
+首页: /
+归档: /archives
+关于我: /about   ##不需要可以不用加
+profile:
+enable: true
+href: https://a1bertlee.github.io/
+rss: /atom.xml     ## RSS address.
+imglogo:
+enable: false            ## display image logo true/false.
+src: img/logo.svg        ## 推荐`.svg` and `.png` 格式，可以使用自己定义的logo.
+favicon: img/favicon.ico   ## size:32px*32px,推荐`.ico`格式的,这个文件是标签页图标.     
+apple_icon: img/myLogo.jpg ## size:114px*114px,这个图片是个人头像.
+author_img_enable: true ## display author avatar picture
+dataURI: false
+author_img_data: &apos;&apos;
+author_img: img/myLogo.jpg ## size:220px*220px.
+author:
+google_plus: ## eg:116338260303228776998 for https://plus.google.com/u/0/116338260303228776998
+intro_line1: &apos;AlbertLee&apos;    ## eg: &quot;Hello ,I&apos;m Larry Page in Google.&quot;
+intro_line2: &apos;编程爱好者&apos;   ## eg: &quot;This is my blog,believe it or not.&quot;
+weibo:          ## e.g. 436062867 for http://weibo.com/436062867
+twitter:        ## e.g. yangjiansky for https://twitter.com/yangjiansky
+github: &apos;A1bertLee&apos;      ## e.g. A1bertLee for https://github.com/A1bertLee
+facebook:       ## e.g. yangjian for https://favebook.com/yangjian
+tsina:          ## e.g. 1664838973  Your weibo ID,It will be used in share button.
+duoshuo: ##需要先注册多说
+    enable: true  ## duoshuo.com
+    short_name:  a1bertlee  ##your duoshuo short name.
+</code></pre><h2 id="自定义评论功能"><a href="#自定义评论功能" class="headerlink" title="自定义评论功能"></a>自定义评论功能</h2><p>随后在themes/Tinnypp/source/js/embed.js这个文件中第二个函数中的判断e.user_id部分加上自己的多说ID。<br>如果你需要做评论中突出自己的博主身份，则在themes\Tinnypp\layout_partial下的after_footer.ejs文件中将140行那里按照提示做更改即可。</p>
 <h2 id="添加关于模块"><a href="#添加关于模块" class="headerlink" title="添加关于模块"></a>添加关于模块</h2><p>如果你在上面的menu那里加上了about模块，那就需要在根目录的source下新建“about”文件夹，并在其中新建一个index.md文件。</p>
 <h2 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h2><p>新建一个404.html , 404页面放在source根目录下就好了。<br>要注意的是，首先要在文件内容中添加以下</p>
 <pre><code>layout: false
@@ -203,7 +238,7 @@ title: &quot;404&quot;
     <link href="http://yoursite.com/2017/01/09/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E7%B3%BB%E5%88%97%E3%80%902%E3%80%91%E6%9B%B4%E6%94%B9%E4%B8%BB%E9%A2%98/"/>
     <id>http://yoursite.com/2017/01/09/如何搭建github博客系列【2】更改主题/</id>
     <published>2017-01-09T03:24:15.000Z</published>
-    <updated>2017-01-10T07:05:00.000Z</updated>
+    <updated>2017-01-11T05:11:26.973Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如果不喜欢自带的主题怎么办？我们可以自己尝试更换它。本文以Tinnypp主题为例，该主题是我从github上fork下来的。</p>
 <h2 id="了解Hexo的文件结构"><a href="#了解Hexo的文件结构" class="headerlink" title="了解Hexo的文件结构"></a>了解Hexo的文件结构</h2><p>当然，更多的还是需要仔细阅读文档才能了解更详细</p>
@@ -241,12 +276,17 @@ title: &quot;404&quot;
 <p>$ npm install hexo-generator-feed –save<br>npm WARN optional dep failed, continuing fsevents@1.0.17<br>hexo-generator-feed@1.2.0 node_modules\hexo-generator-feed<br>├── object-assign@4.1.0<br>└── nunjucks@2.5.2 (asap@2.0.5, yargs@3.32.0, chokidar@1.6.1)</p>
 </blockquote>
 <ul>
-<li><strong>添加配置</strong>。在博客根目录的_config.yml中加入以下代码：<blockquote>
-<p>plugins: hexo-generator-feed<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20</p>
-</blockquote>
-</li>
+<li><p><strong>添加配置</strong>。在博客根目录的_config.yml中加入以下代码：</p>
+<pre><code>plugins: hexo-generator-feed
+feed:
+type: atom
+path: atom.xml
+limit: 20    
+#type 表示类型, 是 atom 还是 rss2.
+#path 表示 Feed 路径(Default: atom.xml/rss2.xml)
+#limit 最多多少篇最近文章
+</code></pre></li>
 </ul>
-<p>// type 表示类型, 是 atom 还是 rss2.<br>// path 表示 Feed 路径(Default: atom.xml/rss2.xml)<br>// limit 最多多少篇最近文章</p>
 <p>然后在\themes\Tinnypp目录下的_config.yml中添加：</p>
 <blockquote>
 <p>rss:  /atom.xml</p>
